@@ -60,7 +60,6 @@
   var input = document.querySelector("#input");
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log(form);
     if (input.value === "" || input.value === null)
       return;
     const todo = {
@@ -79,6 +78,6 @@
     label.append(checkbox, todo.title);
     item.append(label);
     list.append(item);
-    console.log("addTodo");
+    form.reset();
   };
 })();
